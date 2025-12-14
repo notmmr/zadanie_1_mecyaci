@@ -4,18 +4,18 @@
 
 int main()
 {
-    EMonths m_iMonthToEnter;
+    EMonths monthToEnter;
 
-    int m_iMonthUserInput;
+    int monthUserInput;
 
     do
     {
         std::cout << "Enter month number: ";
-        std::cin >> m_iMonthUserInput;
+        std::cin >> monthUserInput;
 
-        m_iMonthToEnter = static_cast<EMonths>(m_iMonthUserInput);
+        monthToEnter = static_cast<EMonths>(monthUserInput);
 
-        switch (m_iMonthToEnter)
+        switch (monthToEnter)
         {
         case EMonths::Unknown: std::cout << "Goodbye =)"; break;
         case EMonths::January: std::cout << "January"; break;
@@ -34,7 +34,7 @@ int main()
         }
 
         std::cout << std::endl;
-    } while (m_iMonthUserInput != EMonths::Unknown);
+    } while (monthUserInput != EMonths::Unknown);
 
     return EXIT_SUCCESS;
 }
